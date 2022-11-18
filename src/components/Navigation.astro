@@ -1,0 +1,24 @@
+---
+const links = [
+    { url: "/", title: "Home "},
+    { url: "/about", title: "About "},
+    { url: "/products", title: "Products "}
+]
+---
+<nav class="flex justify-between items-center absolute top-0 right-0 left-0 h-[50px] px-4 text-white bg-gray-400">
+    <h2 class="text-lg font-bold">Astro site</h2>
+    <ul class="flex list-none">
+        {links.map((link) => <li class="mr-2"><a href={link.url}>{link.title}</a></li>)}
+    </ul>
+</nav>
+
+<!-- <style>
+    nav {
+        position: absolute;
+        height: 50px;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: #eee;
+    }
+</style> -->
